@@ -60,9 +60,9 @@ const SITE_DATA = {
     eyebrow:'Parliamo di senza glutine',
     heading:['La farinata è','senza glutine?'],answer:'Sì.',
     lead:'È fatta con farina di ceci, acqua, olio e sale.',
-    points:[{number:'01',title:'Gli ingredienti',text:'Nel post di Belin Che Bon, il locale dichiara che tutti gli ingredienti utilizzati per la farinata sono privi di glutine.'},{number:'02',title:'Il forno',text:'Sempre nello stesso post, Belin Che Bon spiega che nel proprio forno cuoce esclusivamente la farinata.'}],
+    points:[{number:'01',title:'Gli ingredienti, in breve',text:'La base della farinata, come indicata da Belin Che Bon:',ingredients:['Farina di ceci','Acqua','Olio','Sale'],note:'Il locale dichiara di utilizzare ingredienti gluten free.'},{number:'02',title:'Il forno',text:'Nel post sul senza glutine, Belin Che Bon spiega che nel proprio forno cuoce esclusivamente la farinata.'}],
     source:'Dal post Instagram del locale che ci hai condiviso.',
-    publicSource:'Fonte: il post Instagram di @belinchebon_torino.',
+    publicSource:'Fonte: i materiali di Belin Che Bon.',
     note:'Informazioni dichiarate dal locale. Per allergie, esigenze specifiche e ingredienti delle bevande, chiedi sempre al personale. Scheda allergeni completa [DA CONFERMARE].',
     photo:{src:'img/gluten-free-post.svg',alt:'Due teglie di farinata nella foto del post sul senza glutine di Belin Che Bon',width:709,height:430}
   },
