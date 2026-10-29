@@ -1,37 +1,17 @@
-# template-vetrina
+# Belin Che Bon — Torino
 
-Punto di partenza per i siti vetrina one-page dei clienti. Contiene solo le regole
-(`CLAUDE.md`): il sito lo costruisce Claude Code.
+Sito statico HTML, CSS e JavaScript. Foto e logo sono gli asset già preparati per la proposta di sito; i metadati EXIF sono stati rimossi. Font locali con licenze OFL incluse.
 
-## Nuovo cliente
+## Pubblicazione su Vercel
 
-1. Su GitHub: **Use this template → Create a new repository**, proprietario
-   `siti-web-torino`, nome del cliente in minuscolo con trattini (es. `quartin-torino`).
-   Poi clonalo sul tuo computer.
-2. Copia le foto del cliente (menu, logo, locale, slogan, cose divertenti) in
-   `img-originali/`.
-3. Apri un terminale nella cartella del progetto e lancia `claude` (modello più forte per
-   questa corsa: `/model`).
-4. Incolla il messaggio che ti prepara la chat di avvio, in questa forma:
+Repository: siti-web-torino/belin-che-bon-torino. Branch di produzione: main. Preset: Other. Directory radice del repository. Nessun comando di build, nessuna output directory personalizzata.
 
-   ```
-   Nuovo cliente: [NOME], [VIA, QUARTIERE], Torino. Tipo: [pizzeria / bar / ...].
-   Note: [quello che sai]
-   Foto in img-originali/.
-   Preferenze mie, facoltative e non vincolanti: [...]
-   Segui CLAUDE.md. Lavora da solo fino alla fine.
-   ```
+Il 29 ottobre 2026 il link pubblico restituiva 404 perché la repository conteneva solo il template iniziale: mancavano index.html e gli asset del sito. La correzione aggiunge i file del sito nella radice corretta e mantiene i contenuti della proposta.
 
-5. Al termine leggi, in questo ordine: `RAPPORTO.md`, gli screenshot in `docs/anteprime/`,
-   il menu trascritto in `STUDIO.md` e `DECISIONI.md`.
+## Contenuti
 
-## Repository prima, deploy dalla repository
-Per **ogni** sito si crea prima la repo dedicata qui nell'organizzazione, partendo dal template.
-Il codice e i controlli si salvano in quella repo; poi si usa l'integrazione GitHub già collegata a Vercel, si seleziona/importa la repo e si avvia **Deploy**.
-Anche gli aggiornamenti successivi passano dalla stessa repo. Un sito richiesto pubblico va verificato dal link di produzione senza login o autorizzazioni.
-Repo pubblica/privata e sito pubblico/privato sono due scelte distinte: mantieni le impostazioni concordate con l'utente.
+I dati modificabili sono in SITE_DATA all’inizio di js/main.js. Dopo una modifica eseguire `node scripts/render.mjs` e salvare anche l’HTML aggiornato. Il sito non richiede una build durante il deploy.
 
-## Perché CLAUDE.md non cambia da solo
-È un normale file di testo. Cambia solo se lo modifichi tu o se chiedi a Claude di farlo
-("aggiungi questa regola al CLAUDE.md"). Ogni nuovo cliente riceve una copia al momento
-della creazione dal template: migliorare il template non cambia i siti già fatti.
+Il menu include filtri, informazioni sul senza glutine, link alle piattaforme di delivery e animazione della farinata durante lo scorrimento. Il sito resta una proposta dimostrativa non ufficiale, con noindex e con i dati ancora da confermare indicati nella pagina.
+
+Gli appunti interni, le copie originali delle immagini e i materiali di verifica non sono inclusi in questo ripristino pubblico.
