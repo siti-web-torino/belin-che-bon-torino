@@ -72,7 +72,7 @@ const SITE_DATA = {
   photos:{
     hero:{src:'img/farinata-intera-ai.webp',alt:'Farinata Belin intera con olive, stracchino e crema al basilico; bordi completati con IA dalla foto originale',width:1254,height:1254},
     classica:{src:'img/classica.svg',alt:'Farinata semplice su un tagliere, dalla foto fornita dall’utente',width:709,height:885},
-    belin:{src:'img/belin.svg',alt:'Farinata con olive e crema verde, dalla foto fornita dall’utente',width:709,height:602},
+    belin:{src:'img/farinata-intera-ai.webp',alt:'Farinata Belin intera con olive, stracchino e crema al basilico; bordi completati con IA dalla foto originale',width:1254,height:1254,cutout:true},
     porky:{src:'img/porky.svg',alt:'Farinata farcita su un tagliere, dalla foto fornita dall’utente',width:709,height:602}
   }
 };
