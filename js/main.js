@@ -18,7 +18,7 @@ const SITE_DATA = {
     eyebrow:'Farinata · Torino',
     heading:['La farinata.','A Torino.'],
     text:'Farina di ceci, acqua, olio e sale. Dalla Classica alle farinate farcite: scopri il menu di Belin Che Bon, in via Bogino 5.',
-    photo:'belin',
+    photo:'hero',
     caption:'Farinata farcita',
     scroll:'Scorri, si gira!',
     glutenLabel:'E il glutine?',
@@ -68,8 +68,9 @@ const SITE_DATA = {
   },
   delivery:{eyebrow:'Delivery & asporto',heading:['La farinata,','dove vuoi tu.'],text:'Scegli la tua app e verifica consegna o ritiro per il tuo indirizzo. L’ordine si completa direttamente sulla piattaforma.',note:'Disponibilità, costi e tempi sono quelli mostrati dall’app al momento dell’ordine.',platforms:[{name:'Glovo',label:'Ordina su Glovo',url:'https://glovoapp.com/it/it/torino/stores/belin-che-bon-tor'},{name:'Just Eat',label:'Ordina su Just Eat',url:'https://www.justeat.it/restaurants-belin-che-bon-torino/menu'}]},
   visit:{eyebrow:'Vieni a trovarci',heading:['Ci vediamo','in via Bogino.'],addressLabel:'L’indirizzo',hoursLabel:'Gli orari',hours:'[DA CONFERMARE]',hoursNote:'Consulta gli aggiornamenti sulla scheda Google Maps prima di passare.',contactLabel:'Per restare in contatto',contactNote:'Per informazioni scrivi al profilo Instagram del locale.'},
-  footer:{demo:'Proposta dimostrativa non ufficiale, da approvare con il locale.',sourcesTitle:'Fonti e dati da confermare',sourcesText:'Menu e prezzi: Glovo, consultato il 29 ottobre 2026. Prezzi al banco, disponibilità, abbinamento foto e scheda allergeni da confermare. Dichiarazioni sul senza glutine: post del locale fornito dall’utente. Indirizzo: Maps e Just Eat.',privacyTitle:'Privacy della demo',privacyText:'Questa pagina non usa moduli, analytics, cookie opzionali o contenuti incorporati da servizi esterni. Aprendo Maps, Instagram o le app di delivery si applicano le loro informative.',legal:'Ragione sociale e partita IVA: [DA CONFERMARE].'},
+  footer:{demo:'Proposta dimostrativa non ufficiale, da approvare con il locale.',sourcesTitle:'Fonti e dati da confermare',sourcesText:'Menu e prezzi: Glovo, consultato il 29 ottobre 2026. Prezzi al banco, disponibilità, abbinamento foto e scheda allergeni da confermare. Dichiarazioni sul senza glutine: post del locale fornito dall’utente. Foto iniziale: bordi completati con IA dalla foto fornita dall’utente. Indirizzo: Maps e Just Eat.',privacyTitle:'Privacy della demo',privacyText:'Questa pagina non usa moduli, analytics, cookie opzionali o contenuti incorporati da servizi esterni. Aprendo Maps, Instagram o le app di delivery si applicano le loro informative.',legal:'Ragione sociale e partita IVA: [DA CONFERMARE].'},
   photos:{
+    hero:{src:'img/farinata-intera-ai.webp',alt:'Farinata Belin intera con olive, stracchino e crema al basilico; bordi completati con IA dalla foto originale',width:1254,height:1254},
     classica:{src:'img/classica.svg',alt:'Farinata semplice su un tagliere, dalla foto fornita dall’utente',width:709,height:885},
     belin:{src:'img/belin.svg',alt:'Farinata con olive e crema verde, dalla foto fornita dall’utente',width:709,height:602},
     porky:{src:'img/porky.svg',alt:'Farinata farcita su un tagliere, dalla foto fornita dall’utente',width:709,height:602}
