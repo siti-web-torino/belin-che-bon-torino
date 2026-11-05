@@ -1,51 +1,54 @@
+'use strict';
+
 /* Tutti i contenuti modificabili. Dopo una modifica: node scripts/render.mjs */
 const SITE_DATA = {
   name: 'Belin Che Bon',
   title: 'Belin Che Bon — La farinata a Torino',
-  description: 'La farinata di Belin Che Bon a Torino: menu, foto, informazioni sul senza glutine e collegamenti a Glovo e Just Eat. Proposta dimostrativa non ufficiale.',
-  demo: 'Proposta di sito · non ufficiale',
+  description: 'Sforniamo farinata ligure nel cuore di Torino. Scopri il nostro menu, componi la tua teglia e vieni a trovarci in Via Giambattista Bogino 5.',
   nav: [{label:'Menu',href:'#menu'},{label:'Senza glutine',href:'#senza-glutine'},{label:'Dove siamo',href:'#dove'}],
-  actions: { menu:'Scopri il menu', order:'Ordina a casa', directions:'Come arrivare', instagram:'Seguici su Instagram', top:'Torna su' },
+  actions: { menu:'Scopri il menu', order:'Ordina a casa', directions:'Come arrivare' },
   address: 'Via Giambattista Bogino, 5',
   city: '10123 Torino',
   locationShort: 'Via Bogino 5 · Torino centro',
   maps: 'https://www.google.com/maps/search/Belin+Che+Bon+Torino',
   instagram: 'https://www.instagram.com/belinchebon_torino/',
-  instagramHandle: '@belinchebon_torino',
   logo: {src:'img/logo.svg',alt:'Belin Che Bon, con il marinaio del marchio',width:820,height:365},
   mascot: {src:'img/marinaio.svg',alt:'Il marinaio con occhiali e calice di Belin Che Bon',width:800,height:800},
   hero: {
-    eyebrow:'Farinata · Torino',
-    heading:['La farinata.','A Torino.'],
-    text:'Farina di ceci, acqua, olio e sale. Dalla Classica alle farinate farcite: scopri il menu di Belin Che Bon, in via Bogino 5.',
+    eyebrow:'Farinata ligure · Torino',
+    heading:['Farinata.','Belin, che bon!'],
+    text:'Abbiamo portato un pezzo di Liguria in via Bogino. Sforniamo farinata dorata e la serviamo calda, dalla nostra Classica alle teglie farcite.',
     photo:'hero',
-    caption:'Farinata farcita',
+    badges:['100% Farina di Ceci','Cotta in teglia','Croccante fuori, morbida dentro'],
     scroll:'Scorri, si gira!',
-    glutenLabel:'E il glutine?',
-    glutenAnswer:'Ne parliamo qui',
-    bottom:['Farinata di ceci','Via Bogino 5','Glovo & Just Eat']
+    bottom:['Farinata di ceci','Via Bogino 5','Asporto & delivery']
   },
   menu: {
     eyebrow:'Il menu',heading:'Che farinata sei?',
-    text:'Classica o farcita? Qui trovi le proposte e gli ingredienti del menu disponibile sul delivery.',
-    validation:'[DA CONFERMARE] Menu e prezzi in locale. Listino Glovo rilevato il 29 ottobre 2026; sulle app prezzi e disponibilità possono variare.',
-    photoNote:'Abbinamento delle foto a Classica, Belin e Porky da confermare con il locale.',
-    categories:[{id:'all',label:'Tutto'},{id:'farinate',label:'Farinate'},{id:'dolci',label:'Dolci'},{id:'bevande',label:'Da bere'}],
+    text:'Partiamo sempre dalla nostra farinata di ceci. La sforniamo con la crosta dorata e ci divertiamo a farcirla in sette modi.',
+    iconic:'Le 3 Iconiche Illustrate',
+    categories:[
+      {id:'all',label:'Tutte'},
+      {id:'farinate',label:'Le Farinate (7)'},
+      {id:'custom',label:'Componi la Tua'},
+      {id:'dolci',label:'Muffin di Ceci'},
+      {id:'bevande',label:'Da Bere & Cocktail'}
+    ],
     groups:[
-      {id:'farinate',heading:'Le farinate',items:[
-        {name:'Classica',description:'Sale, pepe e scorza di limone.',price:'5,00',photo:'classica'},
-        {name:'Belin',description:'Stracchino, olive taggiasche e crema al basilico.',price:'9,00',photo:'belin'},
-        {name:'Porky',description:'Porchetta, ciuffi di patate arrosto e crema al rosmarino.',price:'8,50',photo:'porky'},
-        {name:'Spicy',description:'Ventricina, cipolle caramellate e crema di gorgonzola.',price:'9,00'},
-        {name:'Bosco',description:'Funghi, toma e nocciole tostate.',price:'9,00'},
-        {name:'Billy',description:'Peperoni arrosto, pesto di rucola e scaglie di grana.',price:'9,00'},
-        {name:'Halloween',description:'Pancetta, crema di zucca e scaglie di grana.',price:'8,00',tag:'Stagionale · disponibilità da verificare'}
+      {id:'farinate',heading:'Tutte le Farinate in Teglia',items:[
+        {name:'Classica',description:'Sale, pepe e scorza di limone.',price:'5,00',photo:'classica',tag:'🌱 Vegetariana',taste:'vegetariana'},
+        {name:'Belin',description:'Stracchino, olive taggiasche e crema al basilico.',price:'9,00',photo:'belin',tag:'🌿 Ligure DOC',taste:'ligure'},
+        {name:'Porky',description:'Porchetta, ciuffi di patate arrosto e crema al rosmarino.',price:'8,50',photo:'porky',tag:'🍖 Saporita',taste:'saporita'},
+        {name:'Spicy',description:'Ventricina, cipolle caramellate e crema di gorgonzola.',price:'9,00',tag:'🌶️ Piccante',taste:'piccante'},
+        {name:'Bosco',description:'Funghi, toma e nocciole tostate.',price:'9,00',tag:'🍄 Autunnale',taste:'autunnale'},
+        {name:'Billy',description:'Peperoni arrosto, pesto di rucola e scaglie di grana.',price:'9,00',tag:'🌿 Alle erbe',taste:'ligure'},
+        {name:'Speciale Zucca & Pancetta',description:'Pancetta, crema di zucca e scaglie di grana.',price:'8,00',tag:'🎃 Autunnale',taste:'autunnale'}
       ]},
-      {id:'dolci',heading:'Un dolce, dopo?',items:[
+      {id:'dolci',heading:'Muffin di Ceci',items:[
         {name:'Muffin Ciock',description:'Farina di ceci, yogurt greco e gocce di cioccolato.',price:'3,50'},
         {name:'Muffin Bosco',description:'Farina di ceci, yogurt greco e frutti di bosco.',price:'3,50'}
       ]},
-      {id:'bevande',heading:'Da bere',items:[
+      {id:'bevande',heading:'Da Bere & Cocktail',items:[
         {name:'Acqua',description:'Naturale o frizzante · 0,5 l.',price:'2,00'},
         {name:'Lurisia',description:'Limonata, aranciata rossa, chinotto o gazzosa · 33 cl.',price:'3,50'},
         {name:'Molecola',description:'Classica o zero · 33 cl.',price:'3,00'},
@@ -53,49 +56,135 @@ const SITE_DATA = {
         {name:'Cocktail in lattina',description:'Red Spritz, Nobel, Moscow Mule, Gin Tonic, Cuba Libre o Negroni · 33 cl.',price:'7,00',tag:'Bevande alcoliche · solo maggiorenni'}
       ]}
     ],
-    custom:{heading:'La farinata la tela, tu l’artista',text:'Scegli gli ingredienti direttamente sulle app. Base farinata da 5,00 €; aggiunte e prezzo finale da verificare prima dell’ordine.',action:'Componila sul delivery'},
-    allergens:'Per gli allergeni e la composizione completa chiedi al personale prima di ordinare. Le descrizioni sono sintetiche.'
+    custom:{
+      heading:'La Farinata è la Tela, Tu l’Artista',
+      base:'Base da 5,00 €',
+      text:'Noi ci mettiamo la base. Tocca gli ingredienti e guarda la tua teglia prendere forma.',
+      empty:'La tua teglia parte dalla Classica.',
+      handoff:'Quando passi all’app, scegli di nuovo gli ingredienti disponibili e controlla il prezzo finale.',
+      action:'Ordinala ora su Glovo o Just Eat',
+      ingredients:[
+        {name:'Stracchino',icon:'🧀'},
+        {name:'Gorgonzola',icon:'🧀'},
+        {name:'Toma',icon:'🧀'},
+        {name:'Porchetta',icon:'🍖'},
+        {name:'Ventricina',icon:'🌶️'},
+        {name:'Pancetta',icon:'🥓'},
+        {name:'Olive Taggiasche',icon:'🫒'},
+        {name:'Funghi',icon:'🍄'},
+        {name:'Cipolle Caramellate',icon:'🧅'},
+        {name:'Peperoni',icon:'🫑'},
+        {name:'Nocciole',icon:'🌰'},
+        {name:'Crema al Basilico',icon:'🌿'},
+        {name:'Pesto di Rucola',icon:'🌱'}
+      ]
+    },
+    allergens:'Chiedici la lista degli ingredienti e degli allergeni prima di ordinare.'
   },
   gluten:{
-    eyebrow:'Parliamo di senza glutine',
-    heading:['La farinata è','senza glutine?'],answer:'Sì.',
-    lead:'È fatta con farina di ceci, acqua, olio e sale.',
-    points:[{number:'01',title:'Gli ingredienti, in breve',text:'La base della farinata, come indicata da Belin Che Bon:',ingredients:['Farina di ceci','Acqua','Olio','Sale'],note:'Il locale dichiara di utilizzare ingredienti gluten free.'},{number:'02',title:'Il forno',text:'Nel post sul senza glutine, Belin Che Bon spiega che nel proprio forno cuoce esclusivamente la farinata.'}],
-    source:'Dal post Instagram del locale che ci hai condiviso.',
-    publicSource:'Fonte: i materiali di Belin Che Bon.',
-    note:'Informazioni dichiarate dal locale. Per allergie, esigenze specifiche e ingredienti delle bevande, chiedi sempre al personale. Scheda allergeni completa [DA CONFERMARE].',
-    photo:{src:'img/gluten-free-post.svg',alt:'Due teglie di farinata nella foto del post sul senza glutine di Belin Che Bon',width:709,height:430}
+    eyebrow:'Dalla nostra cucina',
+    heading:['La nostra farinata è senza glutine?','Sì, al 100%.'],
+    answer:'Senza glutine',
+    lead:'Dal nostro forno, dritta in teglia.',
+    points:[
+      {
+        number:'01',
+        title:'Solo 4 ingredienti naturali',
+        text:'Per la base ci bastano quattro ingredienti.',
+        ingredients:['Farina di ceci selezionata','Acqua','Olio extravergine di oliva','Sale'],
+        note:'Per farcire le nostre teglie scegliamo condimenti senza glutine. Anche i nostri muffin dolci, Ciock e Bosco da 3,50 €, li prepariamo con farina di ceci e ingredienti senza glutine.'
+      },
+      {number:'02',title:'Un forno dedicato solo alla farinata',text:'Nel nostro forno cuociamo esclusivamente farinata e teniamo fuori gli impasti di frumento.'}
+    ],
+    note:'Se hai allergie o esigenze alimentari, parlane con noi prima di ordinare. Ti aiutiamo a controllare ingredienti e allergeni, bevande comprese.',
+    photo:{src:'img/gluten-free-post.svg',alt:'Due teglie della nostra farinata appena sfornata',width:709,height:430}
   },
-  delivery:{eyebrow:'Delivery & asporto',heading:['La farinata,','dove vuoi tu.'],text:'Scegli la tua app e verifica consegna o ritiro per il tuo indirizzo. L’ordine si completa direttamente sulla piattaforma.',note:'Disponibilità, costi e tempi sono quelli mostrati dall’app al momento dell’ordine.',platforms:[{name:'Glovo',label:'Ordina su Glovo',url:'https://glovoapp.com/it/it/torino/stores/belin-che-bon-tor'},{name:'Just Eat',label:'Ordina su Just Eat',url:'https://www.justeat.it/restaurants-belin-che-bon-torino/menu'}]},
-  visit:{eyebrow:'Vieni a trovarci',heading:['Ci vediamo','in via Bogino.'],addressLabel:'L’indirizzo',hoursLabel:'Gli orari',hours:'[DA CONFERMARE]',hoursNote:'Consulta gli aggiornamenti sulla scheda Google Maps prima di passare.',contactLabel:'Per restare in contatto',contactNote:'Per informazioni scrivi al profilo Instagram del locale.'},
-  footer:{demo:'Proposta dimostrativa non ufficiale, da approvare con il locale.',sourcesTitle:'Fonti e dati da confermare',sourcesText:'Menu e prezzi: Glovo, consultato il 29 ottobre 2026. Prezzi al banco, disponibilità, abbinamento foto e scheda allergeni da confermare. Dichiarazioni sul senza glutine: post del locale fornito dall’utente. Foto iniziale: bordi completati con IA dalla foto fornita dall’utente. Indirizzo: Maps e Just Eat.',privacyTitle:'Privacy della demo',privacyText:'Questa pagina non usa moduli, analytics, cookie opzionali o contenuti incorporati da servizi esterni. Aprendo Maps, Instagram o le app di delivery si applicano le loro informative.',legal:'Ragione sociale e partita IVA: [DA CONFERMARE].'},
+  delivery:{
+    eyebrow:'Delivery & asporto',
+    heading:['La nostra farinata,','dove vuoi tu.'],
+    text:'Te la sforniamo in via Bogino 5. Gustala calda da noi, portala via oppure ordinala a domicilio su Glovo o Just Eat.',
+    note:'Nell’app trovi tempi, costi e disponibilità di consegna per il tuo indirizzo.',
+    platforms:[
+      {name:'Glovo',label:'Ordina su Glovo',url:'https://glovoapp.com/it/it/torino/stores/belin-che-bon-tor'},
+      {name:'Just Eat',label:'Ordina su Just Eat',url:'https://www.justeat.it/restaurants-belin-che-bon-torino/menu'}
+    ]
+  },
+  visit:{
+    eyebrow:'Vieni a trovarci',
+    heading:['Ci vediamo','in via Bogino.'],
+    addressLabel:'Il nostro indirizzo',
+    text:'Siamo nel cuore di Torino, a due passi da Via Po, Piazza Castello, Piazza Carlina e dalla Mole Antonelliana.',
+    hoursLabel:'Pranzo o cena?',
+    hours:'Passa a trovarci a pranzo o a cena in Via Bogino 5. Seguici su Instagram @belinchebon_torino per scoprire le farinate speciali fuori menu e gli orari sempre aggiornati.'
+  },
+  footer:{line:'Progetto digitale realizzato su misura per Belin Che Bon Torino.'},
   photos:{
-    hero:{src:'img/farinata-intera-ai.webp',alt:'Farinata Belin intera con olive, stracchino e crema al basilico; bordi completati con IA dalla foto originale',width:1254,height:1254},
-    classica:{src:'img/classica.svg',alt:'Farinata semplice su un tagliere, dalla foto fornita dall’utente',width:709,height:885},
-    belin:{src:'img/farinata-intera-ai.webp',alt:'Farinata Belin intera con olive, stracchino e crema al basilico; bordi completati con IA dalla foto originale',width:1254,height:1254,cutout:true},
-    porky:{src:'img/porky.svg',alt:'Farinata farcita su un tagliere, dalla foto fornita dall’utente',width:709,height:602}
+    hero:{src:'img/farinata-intera-ai.webp',alt:'Farinata Belin intera con olive, stracchino e crema al basilico',width:1254,height:1254},
+    classica:{src:'img/classica.svg',alt:'Farinata Classica su un tagliere',width:709,height:885},
+    belin:{src:'img/farinata-intera-ai.webp',alt:'Farinata Belin intera con olive, stracchino e crema al basilico',width:1254,height:1254,cutout:true},
+    porky:{src:'img/porky.svg',alt:'Farinata Porky su un tagliere',width:709,height:602}
   }
 };
 // END_SITE_DATA
 
-'use strict';
-
 function setupMenuFilters() {
   const buttons = Array.from(document.querySelectorAll('[data-menu-filter]'));
   const groups = Array.from(document.querySelectorAll('[data-menu-group]'));
-  const custom = document.querySelector('[data-custom]');
   const status = document.querySelector('#menu-status');
-  const toolbar = document.querySelector('.menu-filters');
-  if (!buttons.length || !groups.length) return;
-  toolbar.hidden = false;
+  if (!buttons.length || !groups.length || !status) return;
   buttons.forEach(button => button.addEventListener('click', () => {
     const selected = button.dataset.menuFilter;
     buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-    groups.forEach(group => {group.hidden = selected !== 'all' && group.dataset.menuGroup !== selected;});
-    custom.hidden = selected !== 'all' && selected !== 'farinate';
-    const visibleCount = groups.filter(group => !group.hidden).reduce((count, group) => count + group.querySelectorAll('.menu-item').length, 0);
-    status.textContent = `${button.textContent}: ${visibleCount} proposte visualizzate.`;
+    groups.forEach(group => {
+      group.hidden = selected !== 'all' && group.dataset.menuGroup !== selected;
+    });
+    const visibleCount = groups.filter(group => !group.hidden).reduce(
+      (count, group) => count + group.querySelectorAll('.menu-item').length,
+      0
+    );
+    status.textContent = selected === 'custom'
+      ? 'Configuratore della farinata visualizzato.'
+      : `${visibleCount} proposte visualizzate.`;
   }));
+}
+
+function setupCustomFarinata() {
+  const builder = document.querySelector('[data-custom]');
+  if (!builder) return;
+
+  const buttons = Array.from(builder.querySelectorAll('[data-ingredient]'));
+  const toppings = builder.querySelector('[data-custom-toppings]');
+  const summary = builder.querySelector('[data-custom-summary]');
+  const reset = builder.querySelector('[data-custom-reset]');
+  if (!buttons.length || !toppings || !summary || !reset) return;
+
+  const {ingredients, empty} = SITE_DATA.menu.custom;
+  const updatePreview = () => {
+    const selected = buttons
+      .filter(button => button.getAttribute('aria-pressed') === 'true')
+      .map(button => ingredients[Number(button.dataset.ingredient)]);
+    const pieces = selected.map(({icon}) => {
+      const piece = document.createElement('li');
+      piece.textContent = icon;
+      return piece;
+    });
+    toppings.replaceChildren(...pieces);
+    summary.textContent = selected.length
+      ? `Nella tua teglia: ${selected.map(({name}) => name).join(', ')}.`
+      : empty;
+    reset.disabled = selected.length === 0;
+  };
+
+  buttons.forEach(button => button.addEventListener('click', () => {
+    button.setAttribute('aria-pressed', String(button.getAttribute('aria-pressed') !== 'true'));
+    updatePreview();
+  }));
+  reset.addEventListener('click', () => {
+    buttons.forEach(button => button.setAttribute('aria-pressed', 'false'));
+    updatePreview();
+    buttons[0].focus();
+  });
+  updatePreview();
 }
 
 function setupScrollPlate() {
@@ -155,6 +244,7 @@ function setupReveals() {
 
 if (typeof document !== 'undefined') {
   setupMenuFilters();
+  setupCustomFarinata();
   setupScrollPlate();
   setupReveals();
 }
